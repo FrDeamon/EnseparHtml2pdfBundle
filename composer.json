@@ -1,0 +1,22 @@
+{
+    "name": "ensepar/html2pdf-bundle",
+    "type": "symfony-bundle",
+    "description": "Use HTML2PDF as a Symfony2 Service",
+    "keywords": ["pdf", "tcpdf", "html2pdf"],
+    "homepage": "https://github.com/tmaindron/EnseparHtml2pdfBundle",
+    "authors": [
+        {
+            "name": "Tristan Maindron",
+            "email": "tmaindron@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.0",
+        "tmaindron/html2pdf": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Ensepar\\Html2pdfBundle": "" }
+    },
+    "target-dir": "Ensepar/Html2pdfBundle"
+}
