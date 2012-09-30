@@ -1,0 +1,9 @@
+parameters:
+  html2pdf.orientation: P
+  html2pdf.format: A4
+  html2pdf.lang: en
+
+services:
+  html2pdf:
+    class:        Ensepar\Html2pdfBundle\Service\Html2pdf
+    arguments:    [%html2pdf.orientation%, %html2pdf.format%, %html2pdf.lang%]
