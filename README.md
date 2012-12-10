@@ -11,7 +11,7 @@ Just add this to your composer.json file:
 ```js
 "require": {
   ...
-  "ensepar/html2dpf-bundle" : "dev-master"
+  "ensepar/html2pdf-bundle" : "dev-master"
 }
 ```
 
