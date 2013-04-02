@@ -14,7 +14,11 @@ Just add this to your composer.json file:
   "ensepar/html2pdf-bundle" : "dev-master"
 }
 ```
+Enable it in the Kernel
 
+```php
+new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
+```
 How to use ?
 ------------
 
@@ -22,11 +26,6 @@ In your action:
 
 ```php
 $html2pdf = $this->get('html2pdf')->get();
-```
-Enable it in the Kernel
-
-```php
-new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
 ```
 
 How to configure?
