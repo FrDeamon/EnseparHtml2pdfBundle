@@ -3,7 +3,11 @@ parameters:
   html2pdf.format: A4
   html2pdf.lang: en
 
+  html2pdf.unicode: true
+  html2pdf.encoding: 'UTF-8'
+  html2pdf.margin: [10,15,10,15]
+
 services:
   html2pdf:
     class:        Ensepar\Html2pdfBundle\Service\Html2pdf
-    arguments:    [%html2pdf.orientation%, %html2pdf.format%, %html2pdf.lang%]
+    arguments:    [%html2pdf.orientation%, %html2pdf.format%, %html2pdf.lang%,%html2pdf.unicode%,%html2pdf.encoding%,%html2pdf.margin%]
