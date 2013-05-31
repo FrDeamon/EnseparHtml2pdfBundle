@@ -9,6 +9,7 @@ class Html2pdf
     public $format;
     public $lang;
     public $unicode;
+    public $encoding;
     public $margin;
 
     public function __construct($mode, $format, $lang, $unicode, $encoding, $margin)
@@ -18,6 +19,7 @@ class Html2pdf
     	$this->lang = $lang;
     	$this->unicode = $unicode;
     	$this->margin = $margin;
+    	$this->encoding = $encoding;
     }
 
     public function get()
