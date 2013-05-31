@@ -11,7 +11,7 @@ class Html2pdf
     public $unicode;
     public $margin;
 
-    public function __construct($mode, $format, $lang,$unicode,$encoding,$margin)
+    public function __construct($mode, $format, $lang, $unicode, $encoding, $margin)
     {
     	$this->mode = $mode;
     	$this->format = $format;
@@ -20,13 +20,12 @@ class Html2pdf
     	$this->margin = $margin;
     }
 
-    public function init()
-    {
-    	$this->html2pdf = new \HTML2PDF($this->mode, $this->format, $this->lang, $this->unicode, $this->encoding, $this->margin);
-    }
-
     public function get()
     {
+        if (null === $this->html2pdf) {
+            $this->html2pdf = new \HTML2PDF($this->mode, $this->format, $this->lang, $this->unicode, $this->encoding, $this->margin);
+        }
+
         return $this->html2pdf;
     }
 }
