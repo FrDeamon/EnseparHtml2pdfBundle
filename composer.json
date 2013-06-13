@@ -1,7 +1,7 @@
 {
     "name": "ensepar/html2pdf-bundle",
     "type": "symfony-bundle",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "Use HTML2PDF as a Symfony2 Service",
     "keywords": ["pdf", "tcpdf", "html2pdf"],
     "homepage": "https://github.com/tmaindron/EnseparHtml2pdfBundle",
