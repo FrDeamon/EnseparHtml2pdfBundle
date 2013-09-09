@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Use HTML2PDF as a Symfony2 Service",
     "keywords": ["pdf", "tcpdf", "html2pdf"],
-    "homepage": "https://github.com/tmaindron/EnseparHtml2pdfBundle",
+    "homepage": "https://github.com/OwlyCode/EnseparHtml2pdfBundle",
     "authors": [
         {
             "name": "Tristan Maindron",
