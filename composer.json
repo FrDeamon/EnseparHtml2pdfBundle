@@ -5,6 +5,7 @@
     "description": "Use HTML2PDF as a Symfony2 Service",
     "keywords": ["pdf", "tcpdf", "html2pdf"],
     "homepage": "https://github.com/OwlyCode/EnseparHtml2pdfBundle",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tristan Maindron",
