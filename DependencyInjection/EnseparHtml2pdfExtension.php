@@ -17,11 +17,14 @@ class EnseparHtml2pdfExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
-        $this->processConfiguration($configuration, $configs);
+        $config = $this->processConfiguration($configuration, $configs);
+
+        foreach ($config as $key => $value) {
+            $container->setParameter(sprintf('html2pdf.%s', $key), $value);
+        }
 
         $file = new FileLocator(__DIR__.'/../Resources/config');
-        $loader = new Loader\YamlFileLoader($container, $file);
-        $loader->load('services.yml');
+        $loader = new Loader\XmlFileLoader($container, $file);
+        $loader->load('services.xml');
     }
 }
-
