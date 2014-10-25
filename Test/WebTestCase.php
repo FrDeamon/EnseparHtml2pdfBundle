@@ -3,7 +3,6 @@
 namespace Ensepar\Html2pdfBundle\Test;
 
 use Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel;
-use Ensepar\Html2pdfBundle\Client\Response;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Bundle\FrameworkBundle\Client;
 
