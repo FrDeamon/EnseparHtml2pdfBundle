@@ -2,6 +2,7 @@ EnseparHtml2pdfBundle
 =====================
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0e16b696-0da3-4efc-b856-60429a9672b4/mini.png)](https://insight.sensiolabs.com/projects/0e16b696-0da3-4efc-b856-60429a9672b4)
+[![Build Status](https://travis-ci.org/OwlyCode/EnseparHtml2pdfBundle.svg?branch=master)](https://travis-ci.org/OwlyCode/EnseparHtml2pdfBundle)
 
 Html2pdf for Symfony 2 as a service.
 
