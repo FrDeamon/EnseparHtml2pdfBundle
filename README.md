@@ -28,13 +28,13 @@ How to use ?
 In your action:
 
 ```php
-$html2pdf = $this->get('html2pdf.factory')->create();
+$html2pdf = $this->get('html2pdf_factory')->create();
 ```
 
 You can pass every option you would pass to html2pdf, for instance :
 
 ```
-$html2pdf = $this->get('html2pdf.factory')->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
+$html2pdf = $this->get('html2pdf_factory')->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
 ```
 
 If the previous arguments are not provided, the factory uses its own default values. You can
