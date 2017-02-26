@@ -5,6 +5,8 @@ EnseparHtml2pdfBundle
 [![Build Status](https://travis-ci.org/OwlyCode/EnseparHtml2pdfBundle.svg?branch=master)](https://travis-ci.org/OwlyCode/EnseparHtml2pdfBundle)
 
 Html2pdf for Symfony 2 as a service.
+<img src='https://github.com/nfouka/HTML2PDF_spipu/blob/master/logo.png?raw=true' />
+
 
 How to install ?
 ----------------
