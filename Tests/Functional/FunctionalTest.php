@@ -23,7 +23,7 @@ class FunctionalTest extends WebTestCase
         $pdf2->writeHTML("<html><body><p>foo</p></body></html>");
 
         // The two pdfs should have the same chars count.
-        $this->assertContains("6075\n%%EOF", $pdf1->Output('my.pdf', 'S'));
-        $this->assertContains("6075\n%%EOF", $pdf2->Output('my.pdf', 'S'));
+        $this->assertContains("6020\n%%EOF", $pdf1->output('my.pdf', 'S'));
+        $this->assertContains("6020\n%%EOF", $pdf2->output('my.pdf', 'S'));
     }
 }
