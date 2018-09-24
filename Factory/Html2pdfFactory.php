@@ -2,6 +2,8 @@
 
 namespace Ensepar\Html2pdfBundle\Factory;
 
+use Spipu\Html2Pdf\Html2Pdf;
+
 /**
  * Creates HTML2PDF instances.
  */
@@ -45,7 +47,7 @@ class Html2pdfFactory
      */
     public function create($orientation = null, $format = null, $lang = null, $unicode = null, $encoding = null, $margin = null)
     {
-        return new \HTML2PDF(
+        return new Html2Pdf(
             $orientation ? $orientation : $this->orientation,
             $format ? $format : $this->format,
             $lang ? $lang : $this->lang,
