@@ -1,8 +1,5 @@
 framework:
     secret: foo
-    router:
-        resource: "%kernel.root_dir%/config/routing.yml"
-    templating: { engine: twig }
 
 ensepar_html2pdf:
     orientation: P
