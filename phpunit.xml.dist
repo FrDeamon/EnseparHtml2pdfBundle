@@ -10,7 +10,7 @@
     convertWarningsToExceptions = "true"
     processIsolation            = "false"
     stopOnFailure               = "false"
-    bootstrap                   = "autoload.php" >
+    bootstrap                   = "vendor/autoload.php" >
 
     <testsuites>
         <testsuite name="EnseparHtml2pdfBundle Test Suite">
