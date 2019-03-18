@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="html2pdf_factory" class="Ensepar\Html2pdfBundle\Factory\Html2pdfFactory" public="true">
+        <service id="Ensepar\Html2pdfBundle\Factory\Html2pdfFactory" class="Ensepar\Html2pdfBundle\Factory\Html2pdfFactory">
             <argument type="string">%html2pdf.orientation%</argument>
             <argument type="string">%html2pdf.format%</argument>
             <argument type="string">%html2pdf.lang%</argument>
@@ -13,5 +13,6 @@
             <argument type="string">%html2pdf.encoding%</argument>
             <argument type="string">%html2pdf.margin%</argument>
         </service>
+        <service alias="Ensepar\Html2pdfBundle\Factory\Html2pdfFactory" id="html2pdf_factory" public="true" />
     </services>
 </container>
