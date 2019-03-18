@@ -2,9 +2,11 @@
 
 namespace Ensepar\Html2pdfBundle\Tests\Functional;
 
-use Ensepar\Html2pdfBundle\Test\WebTestCase;
+use Ensepar\Html2pdfBundle\Factory\Html2pdfFactory;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel;
 
-class FunctionalTest extends WebTestCase
+class FunctionalTest extends KernelTestCase
 {
     /**
      * We make sure multiple calls are OK.
@@ -13,8 +15,10 @@ class FunctionalTest extends WebTestCase
      */
     public function testMultipleCalls()
     {
-        $client = self::createClient();
-        $factory = $client->getContainer()->get('html2pdf_factory');
+        static::bootKernel();
+
+        /** @var Html2pdfFactory $factory */
+        $factory = static::$container->get('html2pdf_factory');
 
         $pdf1 = $factory->create();
         $pdf1->writeHTML("<html><body><p>foo</p></body></html>");
