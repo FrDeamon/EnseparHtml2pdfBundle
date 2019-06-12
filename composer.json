@@ -24,6 +24,5 @@
      },
     "autoload": {
         "psr-4": { "Ensepar\\Html2pdfBundle\\": "./" }
-    },
-    "target-dir": "Ensepar/Html2pdfBundle"
+    }
 }
