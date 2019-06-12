@@ -15,9 +15,8 @@
     <php>
         <env name="APP_ENV" value="test" />
         <env name="KERNEL_CLASS" value="Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel" />
-        <env name="KERNEL_DIR" value="./Tests/Fixtures" />
+        <env name="KERNEL_DIR" value="Tests/Fixtures" />
     </php>
-
 
     <testsuites>
         <testsuite name="EnseparHtml2pdfBundle Test Suite">

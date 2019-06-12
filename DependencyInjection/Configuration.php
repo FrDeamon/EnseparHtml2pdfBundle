@@ -12,8 +12,9 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('ensepar_html2pdf');
         // Keep compatibility with symfony/config < 4.2
+        $treeBuilder = new TreeBuilder();
+
         if (!method_exists($treeBuilder, 'getRootNode')) {
             $root = $treeBuilder->root('ensepar_html2pdf');
         } else {
