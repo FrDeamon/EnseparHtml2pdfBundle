@@ -6,9 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class FunctionalTest extends KernelTestCase
 {
+    protected static $container;
+
     protected function setUp()
     {
-        self::bootKernel();
+        static::bootKernel();
     }
 
     /**
@@ -18,7 +20,7 @@ class FunctionalTest extends KernelTestCase
      */
     public function testMultipleCalls()
     {
-        $factory = self::$container->get('html2pdf_factory');
+        $factory = static::$container->get('html2pdf_factory');
 
         $pdf1 = $factory->create();
         $pdf1->writeHTML("<html><body><p>foo</p></body></html>");
