@@ -8,11 +8,6 @@ class FunctionalTest extends KernelTestCase
 {
     protected static $container;
 
-    protected function setUp()
-    {
-        static::bootKernel();
-    }
-
     /**
      * We make sure multiple calls are OK.
      *
@@ -20,6 +15,8 @@ class FunctionalTest extends KernelTestCase
      */
     public function testMultipleCalls()
     {
+        static::bootKernel();
+
         $factory = static::$container->get('html2pdf_factory');
 
         $pdf1 = $factory->create();
