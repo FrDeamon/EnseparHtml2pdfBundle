@@ -6,7 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class FunctionalTest extends KernelTestCase
 {
-    protected static $container;
+    public static function getKernelClass()
+    {
+        return 'Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel';
+    }
 
     /**
      * We make sure multiple calls are OK.
@@ -17,7 +20,7 @@ class FunctionalTest extends KernelTestCase
     {
         static::bootKernel();
 
-        $factory = static::$container->get('html2pdf_factory');
+        $factory = static::$kernel->getContainer()->get('html2pdf_factory');
 
         $pdf1 = $factory->create();
         $pdf1->writeHTML("<html><body><p>foo</p></body></html>");
