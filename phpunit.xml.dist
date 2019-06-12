@@ -10,7 +10,11 @@
     convertWarningsToExceptions = "true"
     processIsolation            = "false"
     stopOnFailure               = "false"
-    bootstrap                   = "autoload.php" >
+    bootstrap                   = "vendor/autoload.php" >
+
+    <php>
+        <env name="KERNEL_CLASS" value="Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel" />
+    </php>
 
     <testsuites>
         <testsuite name="EnseparHtml2pdfBundle Test Suite">

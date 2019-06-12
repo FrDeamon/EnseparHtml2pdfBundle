@@ -13,7 +13,13 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $root = $treeBuilder->root('ensepar_html2pdf');
+
+        // SF < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $root = $treeBuilder->root('ensepar_html2pdf');
+        } else {
+            $root = $treeBuilder->getRootNode();
+        }
 
         $root
             ->children()
