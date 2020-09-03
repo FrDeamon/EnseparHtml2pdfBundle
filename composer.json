@@ -1,7 +1,7 @@
 {
     "name": "ensepar/html2pdf-bundle",
     "type": "symfony-bundle",
-    "description": "Use HTML2PDF as a Symfony2 Service",
+    "description": "Use HTML2PDF as a Symfony Service",
     "keywords": ["pdf", "tcpdf", "html2pdf"],
     "homepage": "https://github.com/OwlyCode/EnseparHtml2pdfBundle",
     "license": "MIT",
@@ -14,13 +14,13 @@
     "require": {
         "php": ">=5.4",
         "spipu/html2pdf": "~5.2",
-        "symfony/dependency-injection": "^2.7 || ^2.8 || ^3.4 || ^4.1",
-        "symfony/http-kernel": "^2.7 || ^2.8 || ^3.4 || ^4.1"
+        "symfony/dependency-injection": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0",
+        "symfony/http-kernel": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0"
     },
     "require-dev": {
-        "symfony/framework-bundle": "^2.7 || ^2.8 || ^3.4 || ^4.1",
+        "symfony/framework-bundle": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0",
         "phpunit/phpunit": "^7.2 || ^6.5 || ^4.8",
-        "symfony/yaml": "^2.7 || ^2.8 || ^3.4 || ^4.1"
+        "symfony/yaml": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0"
      },
     "autoload": {
         "psr-4": { "Ensepar\\Html2pdfBundle\\": "./" }

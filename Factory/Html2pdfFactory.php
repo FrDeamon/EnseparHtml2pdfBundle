@@ -44,6 +44,8 @@ class Html2pdfFactory
      * @param boolean $unicode
      * @param string $encoding
      * @param int[] $margin
+     *
+     * @return Html2Pdf
      */
     public function create($orientation = null, $format = null, $lang = null, $unicode = null, $encoding = null, $margin = null)
     {
