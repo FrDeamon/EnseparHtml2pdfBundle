@@ -2,9 +2,9 @@ framework:
     secret: foo
 
 ensepar_html2pdf:
-    orientation: P
-    format: A4
-    lang: en
+    orientation: 'P'
+    format: 'A4'
+    lang: 'en'
     unicode: true
-    encoding: UTF-8
-    margin: [10,15,10,15]
+    encoding: 'UTF-8'
+    margin: [10, 15, 10, 15]

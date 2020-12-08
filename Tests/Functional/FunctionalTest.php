@@ -10,7 +10,7 @@ class FunctionalTest extends KernelTestCase
 {
     public static function getKernelClass()
     {
-        return 'Ensepar\Html2pdfBundle\Tests\Fixtures\AppKernel';
+        return AppKernel::class;
     }
 
     /**
@@ -27,16 +27,20 @@ class FunctionalTest extends KernelTestCase
         $pdf1 = $factory->create();
         $pdf1->writeHTML("<html><body><p>foo</p></body></html>");
 
+        $pdf1Output = $pdf1->output('my.pdf', 'S');
+
         $pdf2 = $factory->create();
         $pdf2->writeHTML("<html><body><p>foo</p></body></html>");
 
+        $pdf2Output = $pdf2->output('my.pdf', 'S');
+
         // The two pdfs should have the same chars count.
         if (method_exists($this, 'assertStringContainsString')) {
-            $this->assertStringContainsString("6020\n%%EOF", $pdf1->output('my.pdf', 'S'));
-            $this->assertStringContainsString("6020\n%%EOF", $pdf2->output('my.pdf', 'S'));
+            $this->assertStringContainsString("6434\n%%EOF", $pdf1Output);
+            $this->assertStringContainsString("6434\n%%EOF", $pdf2Output);
         } else {
-            $this->assertContains("6020\n%%EOF", $pdf1->output('my.pdf', 'S'));
-            $this->assertContains("6020\n%%EOF", $pdf2->output('my.pdf', 'S'));
+            $this->assertContains("6434\n%%EOF", $pdf1Output);
+            $this->assertContains("6434\n%%EOF", $pdf2Output);
         }
     }
 }

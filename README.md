@@ -47,7 +47,7 @@ $html2pdfFactory = $this->get(Html2pdfFactory::class)->create();
 
 You can pass every options you would pass to html2pdf, for instance:
 
-```
+```php
 $html2pdfFactory = $this->get(Html2pdfFactory::class)->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
 ```
 
