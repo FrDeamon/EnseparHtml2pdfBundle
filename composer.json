@@ -16,15 +16,16 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=7.2.5",
         "spipu/html2pdf": "~5.2",
-        "symfony/dependency-injection": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0",
-        "symfony/http-kernel": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0"
+        "symfony/dependency-injection": "^5.0|^6.0",
+        "symfony/http-kernel": "^5.0|^6.0"
     },
     "require-dev": {
-        "symfony/framework-bundle": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0",
-        "phpunit/phpunit": "^7.2 || ^6.5 || ^4.8",
-        "symfony/yaml": "^2.7 || ^2.8 || ^3.4 || ^4.1 || ^5.0"
+        "symfony/framework-bundle": "^5.0|^6.0",
+        "phpunit/phpunit": "^7.2|^8.5|^9.5",
+        "symfony/yaml": "^5.0|^6.0",
+        "friendsofphp/php-cs-fixer": "^3.4"
      },
     "autoload": {
         "psr-4": { "Ensepar\\Html2pdfBundle\\": "./" }
