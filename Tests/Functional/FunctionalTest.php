@@ -32,11 +32,11 @@ class FunctionalTest extends KernelTestCase
 
         // The two pdfs should have the same chars count.
         if (method_exists($this, 'assertStringContainsString')) {
-            $this->assertStringContainsString("6020\n%%EOF", $pdf1->output('my.pdf', 'S'));
-            $this->assertStringContainsString("6020\n%%EOF", $pdf2->output('my.pdf', 'S'));
+            $this->assertStringContainsString("6434\n%%EOF", $pdf1->output('my.pdf', 'S'));
+            $this->assertStringContainsString("6434\n%%EOF", $pdf2->output('my.pdf', 'S'));
         } else {
-            $this->assertContains("6020\n%%EOF", $pdf1->output('my.pdf', 'S'));
-            $this->assertContains("6020\n%%EOF", $pdf2->output('my.pdf', 'S'));
+            $this->assertContains("6434\n%%EOF", $pdf1->output('my.pdf', 'S'));
+            $this->assertContains("6434\n%%EOF", $pdf2->output('my.pdf', 'S'));
         }
     }
 }
