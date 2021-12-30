@@ -31,7 +31,7 @@ class AppKernel extends Kernel
      */
     public function getCacheDir()
     {
-        $dir = sys_get_temp_dir().'/test_html2pdf_bundle';
+        $dir = sys_get_temp_dir().'/test_html2pdf_bundle_cache';
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
