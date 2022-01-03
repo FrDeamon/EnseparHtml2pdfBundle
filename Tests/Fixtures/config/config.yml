@@ -1,5 +1,5 @@
 framework:
-    secret: foo
+    secret: 'foo'
 
 ensepar_html2pdf:
     orientation: 'P'
@@ -7,4 +7,4 @@ ensepar_html2pdf:
     lang: 'en'
     unicode: true
     encoding: 'UTF-8'
-    margin: [10,15,10,15]
+    margin: [10, 15, 10, 15]

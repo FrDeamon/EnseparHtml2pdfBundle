@@ -2,6 +2,8 @@
 
 namespace Ensepar\Html2pdfBundle\Tests\Fixtures;
 
+use Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
 
@@ -10,11 +12,11 @@ class AppKernel extends Kernel
     /**
      * {@inheritdoc}
      */
-    public function registerBundles()
+    public function registerBundles(): array
     {
         return array(
-            new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
+            new FrameworkBundle(),
+            new EnseparHtml2pdfBundle(),
         );
     }
 
@@ -29,7 +31,7 @@ class AppKernel extends Kernel
     /**
      * {@inheritdoc}
      */
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         $dir = sys_get_temp_dir().'/test_html2pdf_bundle_cache';
         if (!is_dir($dir)) {
@@ -42,7 +44,7 @@ class AppKernel extends Kernel
     /**
      * {@inheritdoc}
      */
-    public function getLogDir()
+    public function getLogDir(): string
     {
         $dir = sys_get_temp_dir().'/test_html2pdf_bundle_log';
         if (!is_dir($dir)) {

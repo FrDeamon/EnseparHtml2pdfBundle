@@ -1,14 +1,21 @@
 language: php
 php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
   - 7.2
   - 7.3
   - 7.4
+  - 8.0
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 before_install:
   - composer self-update
+  - composer validate
+
 install:
   - COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction
+
+script:
+  - vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
+  - vendor/bin/phpunit
